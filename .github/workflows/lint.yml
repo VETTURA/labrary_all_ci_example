@@ -42,7 +42,7 @@ jobs:
 
       - name: Build the documentation
         run: |
-          sphinx-build -b html source/ build/
+          sphinx-build -b html ./source ./build
 
       # - name: Build HTML docs
       #   run: |
