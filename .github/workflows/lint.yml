@@ -42,8 +42,6 @@ jobs:
 
       # - name: List files
       #   run: ls -R
-      - name: Test path
-        uses: echo ${{ github.workspace }}
 
       - name: Install Sphinx
         run: pip install sphinx sphinx-rtd-theme
