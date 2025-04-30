@@ -40,10 +40,14 @@ jobs:
       - name: Install Sphinx
         run: pip install sphinx sphinx-rtd-theme
 
-      - name: Build HTML docs
+      - name: Build the documentation
         run: |
-          python -m sphinx.ext.apidoc -o docs .
-          sphinx-build -b html docs docs/_build/html
+          sphinx-build -b html source/ build/
+
+      # - name: Build HTML docs
+      #   run: |
+      #     python -m sphinx.ext.apidoc -o docs .
+      #     sphinx-build -b html docs docs/_build/html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
