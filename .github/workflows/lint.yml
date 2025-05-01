@@ -40,21 +40,21 @@ jobs:
       # - name: XDTesting Print Directory Structure
       #   uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
 
-      - name: List files
-        run: ls -R
+      # - name: List files
+      #   run: ls -R
 
-      - name: Show current working directory
-        run: |
-          cd ..
-          tree -L 1
+      # - name: Show current working directory
+      #   run: |
+      #     cd ..
+      #     tree -L 1
 
       # - name: Install Sphinx
       #   run: pip install sphinx sphinx-rtd-theme
 
-      - name: Build documentation
-        run: |
-          cd docs
-          make html
+      # - name: Build documentation
+      #   run: |
+      #     cd docs
+      #     make html
 
       - name: Build the documentation
         run: |
