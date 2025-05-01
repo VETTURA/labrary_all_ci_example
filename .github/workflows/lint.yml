@@ -40,8 +40,8 @@ jobs:
       # - name: XDTesting Print Directory Structure
       #   uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
 
-      # - name: List files
-      #   run: ls -R
+      - name: List files
+        run: ls -R
 
       - name: Install Sphinx
         run: pip install sphinx sphinx-rtd-theme
