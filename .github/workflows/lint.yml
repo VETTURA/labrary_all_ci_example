@@ -33,16 +33,28 @@ jobs:
       - name: Run tests with coverage
         run: pytest --cov=library --cov-report=term
 
+      # - name: Build HTML docs
+      #   run: |
+      #     python -m sphinx.ext.apidoc -o docs .
+      #     sphinx-build -b html docs docs/build/html
+
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: docs/_build/html
+
       - name: Build HTML docs
         run: |
-          python -m sphinx.ext.apidoc -o docs .
-          sphinx-build -b html docs docs/build/html
+          sphinx-build docs/source docs/build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/_build/html
+          allow_empty_commit: true
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: docs/build/
 
 
   docs:
