@@ -58,7 +58,7 @@ jobs:
 
   docker:
     runs-on: ubuntu-latest
-    needs: docs
+    needs: test
 
     steps:
       - name: Checkout code
