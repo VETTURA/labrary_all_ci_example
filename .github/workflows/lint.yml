@@ -45,9 +45,9 @@ jobs:
 
       - name: Show current working directory
         run: |
-          ls /
-          tree -L 1 /
-          ls -la /
+          ls
+          tree -L 1
+          ls -la
 
       # - name: Install Sphinx
       #   run: pip install sphinx sphinx-rtd-theme
