@@ -37,8 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - name: XDTesting Print Directory Structure
-        uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
+      # - name: XDTesting Print Directory Structure
+      #   uses: FiorelaCiroku/XDTesting-Print-Directory-Structure@v1.0.2
 
       # - name: List files
       #   run: ls -R
