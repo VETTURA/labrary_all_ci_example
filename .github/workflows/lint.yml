@@ -33,6 +33,10 @@ jobs:
       - name: Run tests with coverage
         run: pytest --cov=library --cov-report=term
 
+      - name: Build the documentation
+        run: |
+          sphinx-build docs/source docs/build
+
   docs:
     runs-on: ubuntu-latest
     needs: test

@@ -1,8 +1,7 @@
+sphinx
+sphinx-rtd-theme
 black
 flake8
 mypy
 pytest
 pytest-cov
-sphinx
-sphinx-build
-sphinx-rtd-theme
